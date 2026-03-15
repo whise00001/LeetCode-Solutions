@@ -17,5 +17,3 @@ class Solution:
                 pref = pref[0:pref_len]
         
         return pref
-
-

@@ -7,10 +7,10 @@ class Solution:
             return n
 
 
-        for i in range(n):
-            if n > 2:
-                cur = pre1 + pre2    
-                pre1 = pre2
-                pre2 = cur
-        return n
+        for i in range(3,n):
+            cur = pre1 + pre2    
+            pre1 = pre2
+            pre2 = cur
+        
+        return cur
         

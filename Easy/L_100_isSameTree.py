@@ -7,12 +7,13 @@
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         
-        def dfs(root):
-            if not root:
-                return None
-            return (root.val,dfs(root.left),dfs(root.right))
+        if not p and not q:
+            return True
         
-        return dfs(q) == dfs(p)
+        if p and q and p.val == q.val:
+            return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        
+        return False
         
         
 

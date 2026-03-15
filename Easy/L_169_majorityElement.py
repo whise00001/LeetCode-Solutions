@@ -5,10 +5,10 @@ class Solution:
         for i in nums:
             if majority == 0:
                 res = i
-            if res == i :
-                majority +=1
+            if i == res:
+                majority += 1 
             else:
-                majority -=1
+                majority -= 1
         return res
                 
 

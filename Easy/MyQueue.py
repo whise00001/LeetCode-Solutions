@@ -11,11 +11,10 @@ class MyQueue:
         return self.output.pop()
         
     def peek(self) -> int:
-        while self.input:
-            if not self.pop:
-                self.output.append(self.input.pop())
-            else:
-                return self.output[-1]    
+        if not self.output:
+            while self.input:
+                    self.output.append(self.input.pop())
+
         return self.output[-1]
     
     def empty(self) -> bool:
